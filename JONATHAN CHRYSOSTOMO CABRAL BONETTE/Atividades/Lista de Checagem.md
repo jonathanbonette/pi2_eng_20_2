@@ -11,8 +11,6 @@ Eletrônica I</b>
 *Jonathan Chrysostomo Cabral Bonette*
 </td></tr></table>
 
-<b>LISTA DE CHECAGEM</b>
-
 <b>1- Todos que estão na Região Metropolitana da Grande Florianópolis conseguiram ir ao campus Florianópolis para pegar seus componentes tecnológicos?</b><br>
 *Sim.*
 
