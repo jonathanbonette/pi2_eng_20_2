@@ -104,10 +104,12 @@ As dificuldades encontradas por mim foi o uso pela primeira vez do arduino e dos
 ********************************************************
 <h2 align="center">Melhorias</h2>
 
-No primeiro momento existem várias melhorias que poderiam ser implementadas, luzes, sensores e/ou equipamentos que poderiam ser ligados diretamente no relê, e outros sensores diretamente na protoboard. E a longo prazo poderiamos pensar grande, com tempo e conhecimento adequados, podemos explorar por exemplo a instalação de um sistema parecido para automatizar todos os setores de uma residência, portão, verificação de entrada, câmeras, sensores diversos, luzes, automatização de cômodos, entre outras funções.
+No primeiro momento existem várias melhorias que poderiam ser implementadas, luzes, sensores e/ou equipamentos que poderiam ser ligados diretamente no relê, e outros sensores diretamente na protoboard. E a longo prazo poderiamos pensar grande, com tempo e conhecimento adequados, podemos explorar por exemplo a instalação de um sistema parecido para automatizar todos os setores de uma residência, portão, verificação de entrada, câmeras, sensores diversos, luzes, automatização de cômodos, entre outras funções.<br><br>
+
+<p align="center"><img src="../Imagens/iot.jpg" align="center" width="600"><br></p><br>
 
 ********************************************************
-<h2 align="center">Referências Bibliográficas (??)</h2>
+<h2 align="center">Referências Bibliográficas</h2>
 
 https://github.com/Gianbacchio/ESP8266-TelegramBot
 https://create.arduino.cc/projecthub/Shubhamkumar97/home-automation-using-arduino-and-bluetooth-control-404e9c?ref=search&ref_id=ldr%20window&offset=6
