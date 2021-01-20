@@ -52,7 +52,7 @@ Necessário para se comunicar com o o sistema.
 
 **Celular**<br>
 Usado para mandar os comandos ao sistema e se comunicar com a Alexa (para os que não possuem a assistente virtual da Amazon, Amazon Echo).
-<p align="center"><img src="../Imagens/cbot.png" align="center" width="350"><br></p>
+<p align="center"><img src="../Imagens/cbot.png" align="center" width="350"><br></p><br>
 
 **Resistores**<br>
 Usados para o funcionamento adequado do circuito.
@@ -95,13 +95,19 @@ Bot?
 ********************************************************
 <h2 align="center">Resultados, Percepções Pessoais e Considerações Finais</h2>
 
-Auto explicativo<br>
-Falar da dificuldade (placas, tempo, espaço, itens)
+Os resultados foram excelentes devido ao tempo e experiência na área pela minha pessoa, fiquei surpreso pela quantidade de possibilidades que podiamos ter e isso de certa forma até me deixou um pouco confuso, pois cada coisa que procurava na internet ficava mais entusiasmado de incluir mais um sensor, fazer uma coisa sempre a mais, dificultando as vezes o andamento do projeto.
+
+Deixar o tema livre para o desenvolvimento do trabalho, me fez procurar bem mais a respeito dos sensores e aplicações, correr atrás e pensar em diversas soluções para o que havia proposto e no final do projeto, muito mais entusiamo pela área.
+
+As dificuldades encontradas por mim foi o uso pela primeira vez do arduino e dos sensores, descobrir como funciona a IDE do arduino, os sensores, suas pinagens, como usar e fazer conversarem entre sí e apesar da faculdade prover todos os equipamentos, alguns equipamentos usados nesse projeto tiveram que ser comprados a parte como o ESP8266 e o módulo Bluetooh (não utilizado nesse peojeto mas essencial para ver como que funiona a conectividade dos sensores com um celular) e elevaram um pouco o processo de aprendizagem assim como a dificuldade encontrada por querer também aplica em um Bot do Telegram que é um recurso totalmente novo para mim.
+
 ********************************************************
 <h2 align="center">Melhorias</h2>
 
-n^infinito
+No primeiro momento existem várias melhorias que poderiam ser implementadas, luzes, sensores e/ou equipamentos que poderiam ser ligados diretamente no relê, e outros sensores diretamente na protoboard. E a longo prazo poderiamos pensar grande, com tempo e conhecimento adequados, podemos explorar por exemplo a instalação de um sistema parecido para automatizar todos os setores de uma residência, portão, verificação de entrada, câmeras, sensores diversos, luzes, automatização de cômodos, entre outras funções.
+
 ********************************************************
 <h2 align="center">Referências Bibliográficas (??)</h2>
 
-(???)
+https://github.com/Gianbacchio/ESP8266-TelegramBot
+https://create.arduino.cc/projecthub/Shubhamkumar97/home-automation-using-arduino-and-bluetooth-control-404e9c?ref=search&ref_id=ldr%20window&offset=6
