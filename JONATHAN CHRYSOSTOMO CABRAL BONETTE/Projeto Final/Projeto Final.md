@@ -17,13 +17,11 @@ De acordo com informações do site Techaeris, quase 70% dos americanos imaginam
 
 <h2 align="center">Idealização do Projeto</h2>
 
-&&&&&&&
 A principal característica das casas conectadas é o uso massivo de tecnologia de ponta, mesmo em itens comuns como lâmpadas ou fechaduras. O emprego desses dispositivos tem como objetivo trazer maior comodidade, mesmo para tarefas simples como abrir a garagem ou apagar as luzes. A proposta desse projeto é mostrar como que simples ações podem ser automatizadas de formas bem diferentes das usuais.
 
 Ao detectar o sol, sua janela se abre, o breafing diário liga e sua rotina começa, seu café começa a passar, você está pronto para seu dia, devidamente vestido para o dia, pois sua assistente virtual já falou se vai fazer chuva ou sol, se deve levar um guarda-chuva ou um óculos de sol, já sabe quais seus compromissos do dia e as principais notícias de seu interesse até o presente momento, tudo isso sem você fazer absolutamente nada (depois de ter que fazer tudo isso, é claro), e poder comandar e acomoanhar sua casa quando estiver fora dela, será que tem gente por ali? Quantos graus está hoje? Acender ou ligar uma músic ambiente — *ahh o futuro! Ou melhor, o presente!* — .
 
 A idéia desse projeto foi retratar algumas dessas finalidades em um único lugar, o nosso celular. Usando um bot do Telegram, podemos conversar com a casa, mandar comandos para ela, acender a luz do quarto, ver a temperatura, a humidade, ligar uma televisão, uma câmera, etc.
-&&&&&&
 
 ********************************************************
 <h2 align="center">Itens Utilizados (Hardware e Componentes)</h2>
@@ -54,7 +52,7 @@ Necessário para se comunicar com o o sistema.
 
 **Celular**<br>
 Usado para mandar os comandos ao sistema e se comunicar com a Alexa (para os que não possuem a assistente virtual da Amazon, Amazon Echo).
-<p align="center"><img src="../Imagens/mobile.jpeg" align="center" width="600"><br></p>
+<p align="center"><img src="../Imagens/cbot.png" align="center" width="350"><br></p>
 
 **Resistores**<br>
 Usados para o funcionamento adequado do circuito.
