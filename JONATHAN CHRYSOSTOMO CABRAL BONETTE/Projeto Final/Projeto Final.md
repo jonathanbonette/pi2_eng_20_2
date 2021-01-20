@@ -28,39 +28,45 @@ A idéia desse projeto foi retratar algumas dessas finalidades em um único luga
 ********************************************************
 <h2 align="center">Itens Utilizados (Hardware e Componentes)</h2>
 
-&&&&&&&
-Sensor de Luminosidade LDR 5mm<br>
-Usado para detectar a luz do sol e acender o LED.
+**Sensor de Luminosidade LDR 5mm**<br>
+Usado para detectar a luz do sol e acender o LED.<br>
+<p align="center"><img src="../Imagens/ldr.jpg" align="center" width="300"><br></p>
 
-Módulo Relé 5V 1 Canal<br>
+**Módulo Relé 5V 1 Canal**<br>
 Usado para ligar/desligar um determinado sensor/aparelho.
+<p align="center"><img src="../Imagens/rele.jpg" align="center" width="300"><br></p>
 
-Módulo WiFi ESP8266 NodeMcu ESP-12<br>
+**Módulo WiFi ESP8266 NodeMcu ESP-12**<br>
 Necessário para se comunicar com o bot do Telegram e acionar dispositivos.
+<p align="center"><img src="../Imagens/esp8266.jpg" align="center" width="300"><br></p>
 
-Sensor de Umidade e Temperatura DHT11<br>
+**Sensor de Umidade e Temperatura DHT11**<br>
 Necessário para medir temperatura e humidade do ar.
+<p align="center"><img src="../Imagens/dht11.jpg" align="center" width="300"><br></p>
 
-LEDs 5mm<br>
+**LEDs 5mm**<br>
 Usados para representarem luzes de ambientes ou lâmpadas.
+<p align="center"><img src="../Imagens/led.png" align="center" width="300"><br></p>
 
-Arduino R3 Mega<br>
+**Arduino R3 Mega**<br>
 Necessário para se comunicar com o o sistema.
+<p align="center"><img src="../Imagens/mega.jpg" align="center" width="500"><br></p>
 
-Celular<br>
+**Celular**<br>
 Usado para mandar os comandos ao sistema e se comunicar com a Alexa (para os que não possuem a assistente virtual da Amazon, Amazon Echo).
+<p align="center"><img src="../Imagens/mobile.jpeg" align="center" width="600"><br></p>
 
-Resistores<br>
+**Resistores**<br>
 Usados para o funcionamento adequado do circuito.
+<p align="center"><img src="../Imagens/resistor.png" align="center" width="300"><br></p>
 
-Transistor<br>
+**Transistor**<br>
 Usado para o funcionamento adequado do circuito.
+<p align="center"><img src="../Imagens/transistor.jpg" align="center" width="300"><br></p>
 
-Jumpers<br>
+**Jumpers**<br>
 Usados para o funcionamento adequado do circuito.
-
-
-&&&&&&
+<p align="center"><img src="../Imagens/jumper.jpg" align="center" width="300"><br></p>
 
 ********************************************************
 <h2 align="center">C: Conceito</h2>
