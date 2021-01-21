@@ -46,10 +46,6 @@ Necessário para medir temperatura e humidade do ar.
 Usados para representarem luzes de ambientes ou lâmpadas.
 <p align="center"><img src="../Imagens/led.png" align="center" width="200"><br></p>
 
-**Arduino R3 Mega**<br>
-Necessário para se comunicar com o o sistema.
-<p align="center"><img src="../Imagens/mega.jpg" align="center" width="500"><br></p>
-
 **Celular**<br>
 Usado para mandar os comandos ao sistema e se comunicar com a Alexa (para os que não possuem a assistente virtual da Amazon, Amazon Echo).
 <p align="center"><img src="../Imagens/cbot.png" align="center" width="350"><br></p><br>
@@ -106,7 +102,7 @@ A imagem do fritzing demonstra a construção na protoboard feita para este proj
 
 O projeto foi implementado através do código abaixo, que foi construído consultando diversos modos de funcionamento de cada módulo e adaptando-os ao objetivo deste projeto:
 
-Declaração e variaveis
+<h3>Declaração e variaveis</h3>
 
 ``` c++
 
@@ -137,7 +133,7 @@ bool relayStatus = false; // Estado do Relê
 
 ```
 
-Comandos e definições
+<h3>Comandos e definições</h3>
 
 ``` c++
 
@@ -154,7 +150,7 @@ String validSenderIds[SENDER_ID_COUNT] = {"id_aqui", "id_aqui"};
 
 ```
 
-Implementação com o Telegram (Input e Output)
+<h3>Implementação com o Telegram (Input e Output)</h3>
 
 ``` c++
 
@@ -247,7 +243,7 @@ void handleNewMessages(int numNewMessages) {
 
 ```
 
-Setup do Wifi
+<h3>Setup do Wifi</h3>
 
 ``` c++
 
@@ -271,7 +267,7 @@ void setupWifi(){
 
 ```
 
-Setup dos Pinos
+<h3>Setup dos Pinos</h3>
 
 ``` c++
 
@@ -287,7 +283,7 @@ void setupPins(){
 
 ```
 
-Setup
+<h3>Setup</h3>
 
 ``` c++
 
@@ -305,7 +301,7 @@ void setup() {
 
 ```
 
-Loop
+<h3>Loop</h3>
 
 ``` c++
 
@@ -377,7 +373,7 @@ As dificuldades encontradas por mim foi o uso pela primeira vez do arduino e dos
 
 No primeiro momento existem várias melhorias que poderiam ser implementadas, luzes, sensores e/ou equipamentos que poderiam ser ligados diretamente no relê, e outros sensores diretamente na protoboard. Mas não para por ai, podemos até mesmo criar alertas, como por exemplo, quando detectar algo na nossa casa, podemos receber diretamente no chat o que está ocorrendo, isso de qualquer lugar do mundo. E a longo prazo poderiamos pensar grande, com tempo e conhecimento adequados, podemos explorar por exemplo a instalação de um sistema parecido para automatizar todos os setores de uma residência, portão, verificação de entrada, câmeras, sensores diversos, luzes, automatização de cômodos, entre outras funções.<br><br>
 
-<p align="center"><img src="../Imagens/iot.png" align="center" width="600"><br></p><br>
+<p align="center"><img src="../Imagens/melhorias_iot.png" align="center" width="900"><br></p><br>
 
 ********************************************************
 <h2 align="center">Referências Bibliográficas</h2>
