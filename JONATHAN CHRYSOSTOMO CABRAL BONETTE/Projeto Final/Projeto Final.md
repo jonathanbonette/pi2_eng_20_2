@@ -69,15 +69,37 @@ Usados para o funcionamento adequado do circuito.
 ********************************************************
 <h2 align="center">C: Conceito</h2>
 
-Concepção do projeto<br>
-Fluxograma?
+O projeto se baseará em 2 partes ativas (que necessitam comandos de usuário) e 1 parte passiva (onde não é necessário atenção do usuário):
+
+1. A integração celular <=> casa (Ativa)
+2. A integração celular <=> assistênte virtual (Ativa)
+3. A instalação de uma luz com o módulo LDR (Passiva)
+
+Apesar das daus primeiras partes não conversarem entre sí no primeiro momento, seria possivel se tivessemos um equipamento especifico para isso, como por exemplo o dispositivo Amazon Echo.
+
+Podemos no primeiro momento ter uma casa conectada e comandada via um Bot do Telegram, onde podemos enviar comandos e ter resultados daquilo, como por exemplo, ligar uma lâmpada, um ventilador, uma televisão, ter controles remotos como informações de temperatura e umidade (Várias outros módulos podem ser implementados através de ligações simples pelos relês ou mesmo na próprio módulo ESP, que permite mais de 9 conexões de controles simultâneas).
+
+No segundo momento podemos ter acesso a uma assistênte virtual, com comandos definidos por nós, como, quantos graus vai fazer hoje, quanto foi os jogos da rodada do meu campeonato preferido, meus compromissos do dia pelo meu calêndario, programas preferidos, conversas pessoas, etc.
+
+Em um terceiro momento com a aquisição de um dispositivo Echo, podemos fazer o Bot do Telegram e/ou sensores se comunicar diretamente pela assistênte virtual no celular ou no próprio dispositivo (Não utilizado nesse projeto porém é bom ressaltar a possibilidade).
+
+Para a **parte 1**. foi desenvolvido ligações e esquemáticos e um bot no Telegram a fim de fazer conversarem entre sí. Para a **parte 2**. foi desenvolvida uma rotina e uma integração com uma assistênte virtual e programada para tais funções definidas. E por fim para a **parte passiva** foi instalado um módulo LDR e uma luz para que quando não tiver mais luminosidade do ambiente (escurecer o dia, fechar uma janela) ele identificará e acionará a luz (que pode ser uma luz de um quarto, um sistema de alarme, entre outras possibilidades).<br>
+
+<p align="center"><img src="../Imagens/JONATHANBONETTE-MAPAMENTAL.png" align="center" width="900"><br></p><br>
 ********************************************************
+
 <h2 align="center">D: Design</h2>
 
-Imagens do fritzing<br>
-Imagens reais<br>
-Diagrama de blocos?<br>
-Fluxograma?
+A imagem do fritzing demonstra a construção na protoboard feita para este projeto, na qual mostra como foram feitas as ligações de cada módulo e quais as pinagens definidas que foram selecionados para o funcionamento do projeto.
+
+<h3>Parte Eletrônica do Projeto</h3>
+<p align="center"><img src="../Imagens/telegrambot_esp_bb.png" align="center" width="900"><br></p><br>
+
+<h3>Fluxograma</h3>
+<p align="center"><img src="../Imagens/f_telegram_bb.png" align="center" width="600"><br></p><br>
+
+<h3>Imagem</h3>
+<p align="center"><img src="../Imagens/foto2.png" align="center" width="900"><br></p><br>
 ********************************************************
 <h2 align="center">I: Implementação</h2>
 
@@ -113,3 +135,4 @@ No primeiro momento existem várias melhorias que poderiam ser implementadas, lu
 
 https://github.com/Gianbacchio/ESP8266-TelegramBot
 https://create.arduino.cc/projecthub/Shubhamkumar97/home-automation-using-arduino-and-bluetooth-control-404e9c?ref=search&ref_id=ldr%20window&offset=6
+https://www.hackster.io/FilippoOnesti/esp8266-clock-using-max7219-led-matrix-display-b036c7
