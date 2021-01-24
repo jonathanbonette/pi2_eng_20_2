@@ -397,9 +397,9 @@ WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da
 
 - 1. Baixar o aplicativo Amazon Alexa e criar uma conta.
 
-- 2. Selecionamos a opção **Mais** (Onde podemos adiconar o dispositivo Echo se tivermos).
+- 2. Selecionamos a opção **mais** (Onde podemos adiconar o dispositivo Echo se tivermos).
 
-- 3. Clicamos em **Rotinas** e na opção **+** para criarmos uma nova rotina.
+- 3. Clicamos em **rotinas** e na opção **+** para criarmos uma nova rotina.
 
 - 4. Podemos aqui definir o **nome da rotina**, o que queremos dizer para acionar a rotina e as ações desse acionamento (Ligar a TV, dizer os noticiarios, etc.).
 
@@ -412,9 +412,48 @@ WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da
 ********************************************************
 <h2 align="center">O: Operação</h2>
 
+<h3>Interagindo com o Bot no Telegram</h3>
 
+- 1. Vá até o BotFather e clique no link dado por ele para conversar com o bot ou procure pelo nome criado para conversar.
 
+- 2. Clique em **START** ou **COMEÇAR**.
 
+- 3. Receberemos uma mensagem de boas vindas e os referentes comandos.
+
+<p align="center"><img src="../Imagens/bot_start.jpeg" align="center" width="300"><br></p><br>
+
+- 4. Agora é só clicar nos comandos ou escreve-los no chat para ele responder com as caracteristicas programadas.
+
+Podemos ver que os comandos que foram solicitados responderam de acordo com o combinado.
+
+<h3>Ligar e desligar os Relês</h3>
+
+<p align="center"><img src="../Imagens/bot_relay.jpeg" align="center" width="300"><br></p><br>
+
+<p align="center">
+  <img src="../Imagens/relayligado.jpeg" width="300" />
+  <img src="../Imagens/relaydesligado.jpeg" width="300" />
+</p><br>
+
+<h3>Ligar e desligar os LEDs e receber comandos de temperatura e umidade</h3>
+
+<p align="center"><img src="../Imagens/bot_ledstatusambiente.jpeg" align="center" width="300"><br></p><br>
+
+<p align="center">
+  <img src="https://media.giphy.com/media/tvNB9o1wBdTbbas1MJ/giphy.gif" width="300" />
+  <img src="https://media.giphy.com/media/9okLLPCs33WVMA0kPF/giphy.gif" width="300" />
+</p><br>
+
+Vimos que o DHT11 funcionou corretamente vendo que o dia estava chuvoso e a temperatura não apresentava erros (de modo que o DHT11 estava dentro de um quarto e ele analisa o ambiente em torno do sensor).
+
+<p align="center">
+  <img src="../Imagens/app_temperatura.jpeg" width="300" />
+  <img src="../Imagens/app_umidade.jpeg" width="300" />
+</p><br>
+
+<h3>Ligar e desligar o LED do LDR</h3>
+
+<p align="center"><img src="https://media.giphy.com/media/KDKPhpxrDPSZQNnulJ/giphy.gif" align="center" width="300"><br></p><br>
 
 Podemos colocar o tratamento para cada comando que desejarmos, inclusive o Telegram tem suporte para enviar um teclado com os comandos pre-definidos por nós, como pode ser visto ao tratar o comando /opcoes. Os comandos criados foram:<br>
 /start: Comando enviado ao iniciar o chat, mostra uma mensagem de boas vindas e os comandos disponíveis.<br>
@@ -424,24 +463,7 @@ Podemos colocar o tratamento para cada comando que desejarmos, inclusive o Teleg
 /opcoes: Devolve um json com todos os comandos disponíveis.<br>
 /status: Devolve o status atual do led e do relê.<br>
 
-
-
-
-
-
-//leddesligado
-<p align="center"><img src="https://media.giphy.com/media/9okLLPCs33WVMA0kPF/giphy.gif" align="center" width="300"><br></p><br>
-//ledligado
-<p align="center"><img src="https://media.giphy.com/media/tvNB9o1wBdTbbas1MJ/giphy.gif" align="center" width="300"><br></p><br>
-//ldr
-<p align="center"><img src="https://media.giphy.com/media/KDKPhpxrDPSZQNnulJ/giphy.gif" align="center" width="300"><br></p><br>
-
-
-
-
-
-
-
+<p align="center"><img src="../Imagens/bot_opcoes.jpeg" align="center" width="300"><br></p><br>
 
 Vídeo explicativo<br>
 Fotos explicativas<br>
@@ -458,6 +480,8 @@ Deixar o tema livre para o desenvolvimento do trabalho, me fez procurar bem mais
 Normalmente para controlar nossos dispositivos, ficamos limitados a rede WiFi local ou se quisermos acessar externamente, temos que fazer uma tediosa configuração com um serviço de DNS dinâmico (como o DuckDNS), liberar porta no modem, colocar ip estático e outras configurações que não cabem aqui descrever, para poder acessar de fora de casa.
 
 As dificuldades encontradas por mim foi o uso pela primeira vez do arduino e dos sensores, descobrir como funciona a IDE do arduino, os sensores, suas pinagens, como usar e fazer conversarem entre sí e apesar da faculdade prover todos os equipamentos, alguns equipamentos usados nesse projeto tiveram que ser comprados a parte como o ESP8266 e o módulo Bluetooh (não utilizado nesse peojeto mas essencial para ver como que funiona a conectividade dos sensores com um celular) e elevaram um pouco o processo de aprendizagem assim como a dificuldade encontrada por querer também aplica em um Bot do Telegram que é um recurso totalmente novo para mim.
+
+Outra dificuldade encontrada foi o não funcionamento da conectividade etre microcontroladores e o bot a versão 2.4.2 do ESP8266 aparentemente não funciona mais pelo fato de o Telegram ter atualizado e depois de uma vasta busca no Google e Fóruns descobriu-se que deveria usar a versão 2.5 pelo menos, atualizda com a linha de comado   **client.setInsecure();** no setup do código, sem isso é impossivel validar a ID para controlar o microcontrolador.
 
 ********************************************************
 <h2 align="center">Melhorias</h2>
