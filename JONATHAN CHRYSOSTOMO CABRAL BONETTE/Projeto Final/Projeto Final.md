@@ -113,8 +113,8 @@ O projeto foi implementado através do código abaixo, que foi construído consu
 
 // Inicializa a conexão Wifi com o roteador
 //Informações de login da rede
-#define WIFI_SSID "minharedeaqui"
-#define WIFI_PASSWORD "minhasenhaaqui"
+#define WIFI_SSID "sua_rede_aqui"
+#define WIFI_PASSWORD "sua_senha_aqui"
 //Token do bot
 #define BOTtoken "000000000:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  // Seu token do telegram
 
@@ -123,10 +123,10 @@ O projeto foi implementado através do código abaixo, que foi construído consu
 #define DHT_PIN D5
 #define DHTTYPE DHT11
 //Definição dos pinos do LDR e LED
-const int ledPin = 15; //D8
-const int ldrPin = 5; //D1
+const int LED_PIN_LDR = 15; //D8
+const int LDR_PIN = 5; //D1
 
-#define BOT_SCAN_MESSAGE_INTERVAL 1000 //Intervalo para obter novas mensagens (1000 ms)
+#define BOT_SCAN_MESSAGE_INTERVAL 1000 //Intervalo para obter novas mensagens (1000 ms = 1 s)
 long lastTimeScan;  // Ultima vez que buscou mensagem
 bool ledStatus = false; // Estado do LED
 bool relayStatus = false; // Estado do Relê
@@ -156,7 +156,7 @@ String validSenderIds[SENDER_ID_COUNT] = {"id_aqui", "id_aqui"};
 
 // Trata as novas mensagens que chegaram
 void handleNewMessages(int numNewMessages) {
-  Serial.println("handleNewMessages");
+  Serial.println("Tratando novas Mensagens");
   Serial.println(String(numNewMessages));
 
   for (int i=0; i<numNewMessages; i++) {
@@ -169,25 +169,25 @@ void handleNewMessages(int numNewMessages) {
 
     // Tratamento para cada tipo de comando a seguir.
 
-    if (text == "/led_ligado") {
+    if (text == "/ledligado") {
       digitalWrite(LED_PIN, HIGH);   // liga o LED (HIGH é o nível da voltagem)
       ledStatus = true;
       bot.sendMessage(chat_id, "Led está ligado", "");
     }
 
-    if (text == "/led_desligado") {
+    if (text == "/leddesligado") {
       ledStatus = false;
       digitalWrite(LED_PIN, LOW);    // desliga o LED (LOW é o nível da vontagem)
       bot.sendMessage(chat_id, "Led está desligado", "");
     }
 
-    if (text == "/relay_ligado") {
+    if (text == "/relayligado") {
       digitalWrite(RELAY_PIN, HIGH);
       relayStatus = true;
       bot.sendMessage(chat_id, "Relê está ligado", "");
     }
 
-    if (text == "/relay_desligado") {
+    if (text == "/relaydesligado") {
       relayStatus = false;
       digitalWrite(RELAY_PIN, LOW);
       bot.sendMessage(chat_id, "Relê está desligado", "");
@@ -221,19 +221,18 @@ void handleNewMessages(int numNewMessages) {
 
     // Cria teclado com as opções de comando
     if (text == "/opcoes") {
-      String keyboardJson = "[[\"/led_ligado\", \"/led_desligado\"],[\"/relay_ligado\", \"/relay_desligado\"],[\"/ambiente\",\"/status\"],[\"/opcoes\"]]";
+      String keyboardJson = "[[\"/ledligado\", \"/leddesligado\"],[\"/relayligado\", \"/relaydesligado\"],[\"/ambiente\",\"/status\"],[\"/opcoes\"]]";
       bot.sendMessageWithReplyKeyboard(chat_id, "Escolha uma das opções", "", keyboardJson, true);
     }
-
     
     // Comando de inicio de conversa no telegram
     if (text == "/start") {
       String welcome = from_name + ", bem vindo ao Bot do Projeto Integrador II.\n";
       welcome += "Para interagir com a casa, use um dos comandos a seguir.\n\n";
-      welcome += "/led_ligado : para ligar o Led \n";
-      welcome += "/led_desligado : para desligar o Led \n";
-      welcome += "/relay_ligado : para ligar o Relê \n";
-      welcome += "/relay_desligado : para desligar o Relê \n";
+      welcome += "/ledligado : para ligar o Led \n";
+      welcome += "/leddesligado : para desligar o Led \n";
+      welcome += "/relayligado : para ligar o Relê \n";
+      welcome += "/relaydesligado : para desligar o Relê \n";
       welcome += "/ambiente : saber a temperatura e umidade do ambiente \n";
       welcome += "/status : para saber o status dos sensores e atuadores \n";
       bot.sendMessage(chat_id, welcome, "Markdown");
@@ -288,8 +287,8 @@ void setupPins(){
 ``` c++
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(ldrPin, INPUT);
+  pinMode(LED_PIN_LDR, OUTPUT);
+  pinMode(LDR_PIN, INPUT);
   client.setInsecure();
   Serial.begin(115200); // Velocidade do monitor
 
@@ -307,21 +306,21 @@ void setup() {
 
 void loop() {
 // Verificação do LDR (sensor passivo)
-int ldrStatus = digitalRead(ldrPin);
+int ldrStatus = digitalRead(LDR_PIN);
 
   if (ldrStatus == 1) {
 
-  digitalWrite(ledPin, HIGH);
+  digitalWrite(LED_PIN_LDR, LOW);
   //Serial.println("Sem presença de luz no LDR, LED está ligado"); // Mensagem enviada ao monitor (controle de funcionamento)
-  Serial.print(ldrStatus);
+  //Serial.print(ldrStatus);
 
   }
 
   else {
 
-  digitalWrite(ledPin, LOW);
+  digitalWrite(LED_PIN_LDR, HIGH);
   //Serial.println("LED está desligado"); // Mensagem enviada ao monitor (controle de funcionamento)
-  Serial.println(ldrStatus);
+  //Serial.println(ldrStatus);
 
   }
   // Bot do Telegram
@@ -342,7 +341,12 @@ int ldrStatus = digitalRead(ldrPin);
 }
 
 ```
-
+//leddesligado
+<p align="center"><img src="https://media.giphy.com/media/9okLLPCs33WVMA0kPF/giphy.gif" align="center" width="300"><br></p><br>
+//ledligado
+<p align="center"><img src="https://media.giphy.com/media/tvNB9o1wBdTbbas1MJ/giphy.gif" align="center" width="300"><br></p><br>
+//ldr
+<p align="center"><img src="https://media.giphy.com/media/KDKPhpxrDPSZQNnulJ/giphy.gif" align="center" width="300"><br></p><br>
 
 
 Código telegram?<br>
