@@ -100,6 +100,51 @@ A imagem do fritzing demonstra a construção na protoboard feita para este proj
 ********************************************************
 <h2 align="center">I: Implementação</h2>
 
+Um chatbot é um software que tenta simular uma conversa entre duas pessoas, interagindo com perguntas e respostas e com isso será possível neste caso controlar LEDs, Relês e fazer a leitura de sensores. Mas o campo é muito vasto, podemos criar alertas, como por exemplo, quando detectar algo na nossa casa, podemos receber diretamente no chat o que está ocorrendo, isso de qualquer lugar do mundo. Uma das ideia por trás da internet das coisas (IoT) é que tudo seja o mais fácil possível para nossos usuários, então usando um chatbot, basta você ter o aplicativo (Telegram) e conversar com seu dispositivos através de comandos pré definidos.
+
+Por que o Telegram? O Telegram é um dos serviços que está crescendo muito ultimamente devido a vários fatores, inclusive as multifuncionalidades que o aplicativo oferece. É um aplicativo suer intuitito e fácil de configurar.
+
+<h3>Criando um Bot no Telegram</h3>
+
+- 1. Abrimos o Telegram e pesquisamos por @BotFather, selecionamos o com a marca azul (oficial seguro).<br>
+<p align="center"><img src="../Imagens/bot_t_procurar.jpeg" align="center" width="300"><br></p><br>
+
+- 2. Digitamos o comando /newbot para iniciar o processo de criação do bot.
+
+- 3. Vai ser requisitado o nome do bot, então digitamos um nome.
+
+- 4. Depois será requisitado o username do bot, que basicamente é a forma que você inicia a conversa com ele, iniciando um chat com o @username_do_seu_bot.
+
+- 5. Depois disso o @BotFather vai devolver pra você um Token de acesso com o formato NNNNNNNNN:um-monte-de-letra-e-numero (Guarde o token gerado para substituir no código fonte .ino).<br>
+
+<p align="center">
+  <img src="../Imagens/bot_t_start.jpeg" width="300" /> 
+  <img src="../Imagens/bot_t_nomes.jpeg" width="300" />
+  <img src="../Imagens/bot_t_token.jpeg" width="300" />
+</p><br>
+
+Com o bot criado e o Token em mão, já podemos começar os trabalhos no nosso microcontrolador.
+
+*O esquema de ligação está detalhado em cima (Design).*
+
+O uso do transistor para controlar o módulo de relê foi necessário pois o ESP8266 além de trabalhar com 3.3v, suas saídas digitais suportam apenas 12mA, então se um módulo precisar mais que isso, pode fazer o microcontrolador reiniciar sozinho e ter comportamentos estranhos.
+
+<h3>Configurar a IDE do Arduino</h3>
+
+- Atualizar o core do ESP8266 (Ferramentas->Placa->Gerenciar de Placas).
+- Biblioteca ArduinoJson (Sketch->Incluir Biblioteca->Gerenciar Bibliotecas).
+- Biblioteca UniversalTelegramBot (Sketch->Incluir Biblioteca->Gerenciar Bibliotecas).
+- Biblioteca SimpleDHT (Sketch->Incluir Biblioteca->Gerenciar Bibliotecas).
+
+<h3>Código</h3>
+
+Basicamente o que o código esse faz é obedecer os seguintes passos:
+
+- Conecta na WiFi configurada — Método setupWifi.
+- Configura os sensores e atuadores — Método setupPins.
+- Fica em loop consultando por novas mensagens no Telegram.
+- Ao receber novas mensagens, começa o tratamento de cada comando.
+
 O projeto foi implementado através do código abaixo, que foi construído consultando diversos modos de funcionamento de cada módulo e adaptando-os ao objetivo deste projeto:
 
 <h3>Declaração e variaveis</h3>
@@ -341,6 +386,46 @@ int ldrStatus = digitalRead(LDR_PIN);
 }
 
 ```
+
+*O código do arduino está na pasta PROJETO FINAL aqui no Github, na pasta com meu nome. Se quiser você vai precisar trocar as seguintes variáveis para usar com o seu projeto de integração com o Telegram:
+BotToken: preencha com o Token obtido do @BotFather do seu bot criado.
+WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da sua casa.*
+
+<h3>Configuração da Alexa</h3>
+
+*No primeiro momento não conseguimos integrar diretamente a interação entre microcontrolador e assistente virtual, porém conforme comentado acima, essa funcionalidade pode ser implementada se tivermos o dispositivo Echo da Amazon.*
+
+- 1. Baixar o aplicativo Amazon Alexa e criar uma conta.
+
+- 2. Selecionamos a opção *Mais* (Onde podemos adiconar o dispositivo Echo se tivermos).
+
+- 3. Clicamos em *Rotinas* e na opção *+* para criarmos uma nova rotina.
+
+- 4. Podemos aqui definir o *nome da rotina*, o que queremos dizer para acionar a rotina e as ações desse acionamento (Ligar a TV, dizer os noticiarios, etc.).
+
+<p align="center">
+  <img src="../Imagens/a_2.jpeg" width="300" /> 
+  <img src="../Imagens/a_3.jpeg" width="300" />
+  <img src="../Imagens/a_4.jpeg" width="300" />
+</p><br>
+
+********************************************************
+<h2 align="center">O: Operação</h2>
+
+
+
+
+
+
+
+Ao receber as mensagens, você pode colocar o tratamento para cada comando que você desejar, inclusive o Telegram tem suporte para enviar um teclado com os comandos pre-definidos por você, como pode ser visto ao tratar o comando /options. Os comandos criados foram:
+/start: Comando enviado ao iniciar o chat, mostra uma mensagem de boas vindas e os comandos disponíveis.
+/ledon e /ledoff: Liga e desliga o LED.
+/relayon e /relayoff: Liga e desliga o Relê.
+/env : Consulta os dados do sensor de temperatura e umidade.
+/options: Devolve um json com todos os comandos disponíveis.
+/status: Devolve o status atual do led e do relê.
+
 //leddesligado
 <p align="center"><img src="https://media.giphy.com/media/9okLLPCs33WVMA0kPF/giphy.gif" align="center" width="300"><br></p><br>
 //ledligado
@@ -349,12 +434,11 @@ int ldrStatus = digitalRead(LDR_PIN);
 <p align="center"><img src="https://media.giphy.com/media/KDKPhpxrDPSZQNnulJ/giphy.gif" align="center" width="300"><br></p><br>
 
 
-Código telegram?<br>
-Explicação das etapas<br>
-Aplicativo?
 
-********************************************************
-<h2 align="center">O: Operação</h2>
+
+
+
+
 
 Vídeo explicativo<br>
 Fotos explicativas<br>
@@ -382,6 +466,7 @@ No primeiro momento existem várias melhorias que poderiam ser implementadas, lu
 ********************************************************
 <h2 align="center">Referências Bibliográficas</h2>
 
+- https://medium.com/@alvaroviebrantz
 - https://github.com/Gianbacchio/ESP8266-TelegramBot<br>
 - https://create.arduino.cc/projecthub/Shubhamkumar97/home-automation-using-arduino-and-bluetooth-control-404e9c?ref=search&ref_id=ldr%20window&offset=6<br>
 - https://www.hackster.io/FilippoOnesti/esp8266-clock-using-max7219-led-matrix-display-b036c7
