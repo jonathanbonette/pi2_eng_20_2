@@ -426,6 +426,8 @@ WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da
 
 Podemos ver que os comandos que foram solicitados responderam de acordo com o combinado.
 
+<p align="center"><img src="../Imagens/monitor_serial.png" align="center"><br></p>
+
 <h3>Ligar e desligar os Relês</h3>
 
 <p align="center"><img src="../Imagens/bot_relay.jpeg" align="center" width="300"><br></p>
@@ -478,7 +480,7 @@ As dificuldades encontradas por mim foi o uso pela primeira vez do arduino e dos
 
 Outra dificuldade encontrada foi o não funcionamento da conectividade entre microcontroladores e o bot a versão 2.4.2 do ESP8266 aparentemente não funciona mais pelo fato de o Telegram ter atualizado e depois de uma vasta busca no Google e Fóruns descobriu-se que deveria usar a versão 2.5 pelo menos, atualizada com a linha de comado   **client.setInsecure();** no setup do código, sem isso é impossível validar a ID para controlar o microcontrolador.
 
-Um problema que infelizmente acompanhou o projeto foi que conforme vamos adicionando bibliotecas e fazendo elas conversarem com o bot o bot se torna lento nas respostas, não possibilitando uma resposta imediata das leituras, porém as leituras são feitas instantaneamente (vendo do controle no monitor serial). O Telegram ainda não está 100% otimizado para fazer essas funções, porém vimos que a plataforma tem muito potencial futuro!
+Um problema que infelizmente acompanhou o projeto foi que conforme vamos adicionando bibliotecas e fazendo elas conversarem com o bot o bot se torna lento nas respostas, não possibilitando uma resposta imediata das leituras, porém as leituras são feitas instantaneamente (vendo do controle no monitor serial). O Telegram ainda não está 100% otimizado para fazer essas funções, porém vimos que a plataforma tem muito potencial futuro.
 
 ********************************************************
 <h2 align="center">Melhorias</h2>
