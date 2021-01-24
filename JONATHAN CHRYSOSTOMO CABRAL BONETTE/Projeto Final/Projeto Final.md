@@ -125,7 +125,7 @@ Por que o Telegram? O Telegram é um dos serviços que está crescendo muito ult
 
 Com o bot criado e o Token em mão, já podemos começar os trabalhos no nosso microcontrolador.
 
-*O esquema de ligação está detalhado em cima (Design).*
+**O esquema de ligação está detalhado em cima (Design).**
 
 O uso do transistor para controlar o módulo de relê foi necessário pois o ESP8266 além de trabalhar com 3.3v, suas saídas digitais suportam apenas 12mA, então se um módulo precisar mais que isso, pode fazer o microcontrolador reiniciar sozinho e ter comportamentos estranhos.
 
@@ -387,8 +387,8 @@ int ldrStatus = digitalRead(LDR_PIN);
 
 ```
 
-*O código do arduino está na pasta PROJETO FINAL aqui no Github, na pasta com meu nome. Se quiser você vai precisar trocar as seguintes variáveis para usar com o seu projeto de integração com o Telegram:
-BotToken: preencha com o Token obtido do @BotFather do seu bot criado.
+*O código do arduino está na pasta PROJETO FINAL aqui no Github, na pasta com meu nome. Se quiser você vai precisar trocar as seguintes variáveis para usar com o seu projeto de integração com o Telegram:<br>
+BotToken: preencha com o Token obtido do @BotFather do seu bot criado.<br>
 WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da sua casa.*
 
 <h3>Configuração da Alexa</h3>
@@ -397,11 +397,11 @@ WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da
 
 - 1. Baixar o aplicativo Amazon Alexa e criar uma conta.
 
-- 2. Selecionamos a opção *Mais* (Onde podemos adiconar o dispositivo Echo se tivermos).
+- 2. Selecionamos a opção **Mais** (Onde podemos adiconar o dispositivo Echo se tivermos).
 
-- 3. Clicamos em *Rotinas* e na opção *+* para criarmos uma nova rotina.
+- 3. Clicamos em **Rotinas** e na opção **+** para criarmos uma nova rotina.
 
-- 4. Podemos aqui definir o *nome da rotina*, o que queremos dizer para acionar a rotina e as ações desse acionamento (Ligar a TV, dizer os noticiarios, etc.).
+- 4. Podemos aqui definir o **nome da rotina**, o que queremos dizer para acionar a rotina e as ações desse acionamento (Ligar a TV, dizer os noticiarios, etc.).
 
 <p align="center">
   <img src="../Imagens/a_2.jpeg" width="300" /> 
@@ -418,13 +418,6 @@ WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da
 
 
 
-Ao receber as mensagens, você pode colocar o tratamento para cada comando que você desejar, inclusive o Telegram tem suporte para enviar um teclado com os comandos pre-definidos por você, como pode ser visto ao tratar o comando /options. Os comandos criados foram:
-/start: Comando enviado ao iniciar o chat, mostra uma mensagem de boas vindas e os comandos disponíveis.
-/ledon e /ledoff: Liga e desliga o LED.
-/relayon e /relayoff: Liga e desliga o Relê.
-/env : Consulta os dados do sensor de temperatura e umidade.
-/options: Devolve um json com todos os comandos disponíveis.
-/status: Devolve o status atual do led e do relê.
 
 //leddesligado
 <p align="center"><img src="https://media.giphy.com/media/9okLLPCs33WVMA0kPF/giphy.gif" align="center" width="300"><br></p><br>
