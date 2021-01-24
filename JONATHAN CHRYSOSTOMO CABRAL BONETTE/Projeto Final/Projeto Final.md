@@ -416,6 +416,16 @@ WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da
 
 
 
+Podemos colocar o tratamento para cada comando que desejarmos, inclusive o Telegram tem suporte para enviar um teclado com os comandos pre-definidos por nós, como pode ser visto ao tratar o comando /opcoes. Os comandos criados foram:<br>
+/start: Comando enviado ao iniciar o chat, mostra uma mensagem de boas vindas e os comandos disponíveis.<br>
+/ledligado e /leddesligado: Liga e desliga o LED.<br>
+/relayligado e /relaydesligado: Liga e desliga o Relê.<br>
+/ambiente : Consulta os dados do sensor de temperatura e umidade.<br>
+/opcoes: Devolve um json com todos os comandos disponíveis.<br>
+/status: Devolve o status atual do led e do relê.<br>
+
+
+
 
 
 
