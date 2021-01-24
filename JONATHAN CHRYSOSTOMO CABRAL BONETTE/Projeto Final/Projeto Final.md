@@ -420,7 +420,7 @@ WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da
 
 - 3. Receberemos uma mensagem de boas vindas e os referentes comandos.
 
-<p align="center"><img src="../Imagens/bot_start.jpeg" align="center" width="300"><br></p><br>
+<p align="center"><img src="../Imagens/bot_start.jpeg" align="center" width="300"><br></p>
 
 - 4. Agora é só clicar nos comandos ou escreve-los no chat para ele responder com as caracteristicas programadas.
 
@@ -428,32 +428,32 @@ Podemos ver que os comandos que foram solicitados responderam de acordo com o co
 
 <h3>Ligar e desligar os Relês</h3>
 
-<p align="center"><img src="../Imagens/bot_relay.jpeg" align="center" width="300"><br></p><br>
+<p align="center"><img src="../Imagens/bot_relay.jpeg" align="center" width="300"><br></p>
 
 <p align="center">
   <img src="../Imagens/relayligado.jpeg" width="300" />
   <img src="../Imagens/relaydesligado.jpeg" width="300" />
-</p><br>
+</p>
 
 <h3>Ligar e desligar os LEDs e receber comandos de temperatura e umidade</h3>
 
-<p align="center"><img src="../Imagens/bot_ledstatusambiente.jpeg" align="center" width="300"><br></p><br>
+<p align="center"><img src="../Imagens/bot_ledstatusambiente.jpeg" align="center" width="300"><br></p>
 
 <p align="center">
   <img src="https://media.giphy.com/media/tvNB9o1wBdTbbas1MJ/giphy.gif" width="300" />
   <img src="https://media.giphy.com/media/9okLLPCs33WVMA0kPF/giphy.gif" width="300" />
-</p><br>
+</p>
 
 Vimos que o DHT11 funcionou corretamente vendo que o dia estava chuvoso e a temperatura não apresentava erros (de modo que o DHT11 estava dentro de um quarto e ele analisa o ambiente em torno do sensor).
 
 <p align="center">
   <img src="../Imagens/app_temperatura.jpeg" width="300" />
   <img src="../Imagens/app_umidade.jpeg" width="300" />
-</p><br>
+</p>
 
 <h3>Ligar e desligar o LED do LDR</h3>
 
-<p align="center"><img src="https://media.giphy.com/media/KDKPhpxrDPSZQNnulJ/giphy.gif" align="center" width="300"><br></p><br>
+<p align="center"><img src="https://media.giphy.com/media/KDKPhpxrDPSZQNnulJ/giphy.gif" align="center" width="300"><br></p>
 
 Podemos colocar o tratamento para cada comando que desejarmos, inclusive o Telegram tem suporte para enviar um teclado com os comandos pre-definidos por nós, como pode ser visto ao tratar o comando /opcoes. Os comandos criados foram:<br>
 /start: Comando enviado ao iniciar o chat, mostra uma mensagem de boas vindas e os comandos disponíveis.<br>
@@ -463,12 +463,7 @@ Podemos colocar o tratamento para cada comando que desejarmos, inclusive o Teleg
 /opcoes: Devolve um json com todos os comandos disponíveis.<br>
 /status: Devolve o status atual do led e do relê.<br>
 
-<p align="center"><img src="../Imagens/bot_opcoes.jpeg" align="center" width="300"><br></p><br>
-
-Vídeo explicativo<br>
-Fotos explicativas<br>
-Fotos do aplicativo?<br>
-Bot?
+<p align="center"><img src="../Imagens/bot_opcoes.jpeg" align="center" width="300"><br></p>
 
 ********************************************************
 <h2 align="center">Resultados, Percepções Pessoais e Considerações Finais</h2>
@@ -482,6 +477,8 @@ Normalmente para controlar nossos dispositivos, ficamos limitados a rede WiFi lo
 As dificuldades encontradas por mim foi o uso pela primeira vez do arduino e dos sensores, descobrir como funciona a IDE do arduino, os sensores, suas pinagens, como usar e fazer conversarem entre sí e apesar da faculdade prover todos os equipamentos, alguns equipamentos usados nesse projeto tiveram que ser comprados a parte como o ESP8266 e o módulo Bluetooh (não utilizado nesse peojeto mas essencial para ver como que funiona a conectividade dos sensores com um celular) e elevaram um pouco o processo de aprendizagem assim como a dificuldade encontrada por querer também aplica em um Bot do Telegram que é um recurso totalmente novo para mim.
 
 Outra dificuldade encontrada foi o não funcionamento da conectividade etre microcontroladores e o bot a versão 2.4.2 do ESP8266 aparentemente não funciona mais pelo fato de o Telegram ter atualizado e depois de uma vasta busca no Google e Fóruns descobriu-se que deveria usar a versão 2.5 pelo menos, atualizda com a linha de comado   **client.setInsecure();** no setup do código, sem isso é impossivel validar a ID para controlar o microcontrolador.
+
+Um problema que infelizmente acompanhou o projeto foi que conforme vamos adicionando blibliotecas e fazendo elas conversarem com o bot o bot se torna lento ans respostas, não possibilitando uma resposta imediata das leituras, porém as leituras são feitas instantaneamente (vendo do controle no monitor serial). O Telegram ainda não está 100% otimizado para fazer essas funções, porém vimos que a plataforma tem muito potêncial futuro!
 
 ********************************************************
 <h2 align="center">Melhorias</h2>
