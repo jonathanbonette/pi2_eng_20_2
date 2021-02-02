@@ -1,2 +1,17 @@
-Escreva o seu texto aqui
-testando
+1. Introdução
+
+  A domótica é o processo de automação de uma residência, no que diz respeito aos seus dispositivos eletro-eletrônicos como luzes, sensores, câmeras, eletrodomésticos e etc.\
+  O objetivo da domótica é facilitar a vida do morador, fazendo com que as pequenas tarefas do seu dia a dia tornem-se cada vez mais independentes e inteligentes.\
+  Desse modo, os ambientes domiciliares estarão mais seguros e confortáveis para seus residentes.
+  
+2. Concepção do Projeto
+
+  O projeto a ser desenvolvido neste artigo será o de uma fechadura eletrônica com algumas funcionalidades inteligentes. A finalidade, comum em projetos de domótica,\
+  é proporcionar aos usuários um nível mais elevado de conforto e segurança. 
+  
+  2.1. Funcionalidades
+  
+  Dentre as funcionalidades mencionadas estão teclado numérico, controle via internet, sensor de gás, alerta sonoro e registro de aberturas.\
+  Desse modo o projeto final poderá garantir os benefícios almejados no processo de concepção.
+  
+  2.2. Benefícios
