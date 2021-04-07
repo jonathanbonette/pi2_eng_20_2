@@ -30,7 +30,10 @@ O Arduino Uno é uma placa de microcontrolador de código aberto baseada no micr
 Tem a função de verificar a presença de gás inflamável e/ou fumaça no local onde estiver instalado, alertando o sistema microcontrolador do ocorrido. é capaz de detectar diversos tipos de gases, entre eles: gás de petróleo liquefeito, butano, propano, metano, hidrogênio, álcool, gás natural, entre outros, ou mesmo fumaça.
 <p align="center"><img src= "sensor_gas.jpg" align="center" width="200"><br></p>
 
+<h4>Módulo Buzzer 5V Passivo</h4>
 
+
+<p align="center"><img src= "buzzer.jpg" align="center" width="270"><br></p>
 
 [comment]:<> (<h3 align="center">Arduino</h3> )
 [comment]:<> (<p><img src= "arduino.jpg" align="center" width="100"><br></p>)
