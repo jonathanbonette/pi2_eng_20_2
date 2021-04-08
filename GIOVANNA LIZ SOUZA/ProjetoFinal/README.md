@@ -51,9 +51,11 @@ Possibilita transmitir e receber dados através de comunicação sem fio. Este m
 <p align="center"><img src= "modulo_bluetooth.png" align="center" width="200"><br></p>
 
 <h3>Design</h3>
-[comment]:<> (<h3 align="center">Arduino</h3> )
-[comment]:<> (<p><img src= "arduino.jpg" align="center" width="50"><br></p>)
-  
+
+
+
+
+
   
 
 
