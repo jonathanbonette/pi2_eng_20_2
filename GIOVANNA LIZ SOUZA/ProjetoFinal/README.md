@@ -24,16 +24,21 @@ Para aplicar e implantar este sistema se faz necessário a elaboração de um pr
 <h4> Arduino Uno </h4>
 
 O Arduino Uno é uma placa de microcontrolador de código aberto baseada no microcontrolador Microchip ATmega328P e desenvolvida pela Arduino.cc. A placa está equipada com conjuntos de pinos de entrada / saída digitais e analógicos que podem ser conectados a várias placas de expansão e outros circuitos. As entradas e saídas digitais estão localizadas desde o pino 0 até o pino 13. Estes pinos devem ser configurados previamente para que atuem como entradas ou saídas.
-<p align="center"><img src= "arduino.jpg" align="center" width="200"><br></p>
+<p align="center"><img src= "arduino.jpg" align="center" width="180"><br></p>
 
 <h4>Sensor de Gás MQ- 2</h4>
 Tem a função de verificar a presença de gás inflamável e/ou fumaça no local onde estiver instalado, alertando o sistema microcontrolador do ocorrido. é capaz de detectar diversos tipos de gases, entre eles: gás de petróleo liquefeito, butano, propano, metano, hidrogênio, álcool, gás natural, entre outros, ou mesmo fumaça.
 <p align="center"><img src= "sensor_gas.jpg" align="center" width="200"><br></p>
 
 <h4>Módulo Buzzer 5V Passivo</h4>
+As formas de onda dos sons são enviadas diretamente para o pino de I/O, resultando em um som mais limpo.
+
+<p align="center"><img src= "buzzer.jpg" align="center" width="250"><br></p>
 
 
-<p align="center"><img src= "buzzer.jpg" align="center" width="270"><br></p>
+<h4>Sensor De Movimento e Presença PIR - HC-SR501</h4>
+É capaz de detectar movimento de objetos que exalam calor e que estejam dentro do seu raio de detecção que alcança até 7 metros. Com o sensor atuando, qualquer objeto que se movimentar dentro do seu campo de detecção, fará com que a saída do mesmo seja ativada.
+
 
 [comment]:<> (<h3 align="center">Arduino</h3> )
 [comment]:<> (<p><img src= "arduino.jpg" align="center" width="100"><br></p>)
