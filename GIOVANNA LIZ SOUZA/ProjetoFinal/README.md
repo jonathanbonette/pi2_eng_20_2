@@ -39,9 +39,10 @@ As formas de onda dos sons são enviadas diretamente para o pino de I/O, resulta
 <h4>Sensor De Movimento e Presença PIR - HC-SR501</h4>
 É capaz de detectar movimento de objetos que exalam calor e que estejam dentro do seu raio de detecção que alcança até 7 metros. Com o sensor atuando, qualquer objeto que se movimentar dentro do seu campo de detecção, fará com que a saída do mesmo seja ativada.
 
+<p align="center"><img src= "sensor_presenca.png" align="center" with="20"><br></p>
 
 [comment]:<> (<h3 align="center">Arduino</h3> )
-[comment]:<> (<p><img src= "arduino.jpg" align="center" width="100"><br></p>)
+[comment]:<> (<p><img src= "arduino.jpg" align="center" width="50"><br></p>)
   
   
 
