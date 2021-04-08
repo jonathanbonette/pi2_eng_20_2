@@ -41,6 +41,16 @@ As formas de onda dos sons são enviadas diretamente para o pino de I/O, resulta
 
 <p align="center"><img src= "sensor_movimento.jpg" align="center" with="50"><br></p>
 
+<h4>Sensor de água</h4>
+Utilizado para detectar o nível ou profundidade de um recipiente com água. Caso não seja detectado água na superfície da placa, a saída analógica do sensor se mantém zerada e quando o sensor detectar a presença de água sobre a superfície, a saída analógica irá variar sua leitura sempre acima de zero.
+<p align="center"><img src= "sensor_agua.png" align="center" width="200"><br></p>
+
+<h4>Módulo Bluetooth HC-05 / HC-06</h4>
+Possibilita transmitir e receber dados através de comunicação sem fio. Este módulo pode ser utilizado para criação de comunicação wireless para troca de informações entre dispositivos.
+
+<p align="center"><img src= "modulo_bluetooth.png" align="center" width="200"><br></p>
+
+
 [comment]:<> (<h3 align="center">Arduino</h3> )
 [comment]:<> (<p><img src= "arduino.jpg" align="center" width="50"><br></p>)
   
