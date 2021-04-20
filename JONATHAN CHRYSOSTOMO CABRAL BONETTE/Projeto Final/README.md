@@ -94,9 +94,6 @@ A imagem do fritzing demonstra a construção na protoboard feita para este proj
 <h3>Fluxograma</h3>
 <p align="center"><img src="../Imagens/f_telegram_bb.png" align="center" width="600"><br></p><br>
 
-<h3>Imagem</h3>
-<p align="center"><img src="../Imagens/foto2.png" align="center" width="900"><br></p><br>
-
 ********************************************************
 <h2 align="center">I: Implementação</h2>
 
@@ -409,6 +406,9 @@ WIFI_SSID e WIFI_PASSWORD: você deve informar os dados para conectar na WiFi da
   <img src="../Imagens/a_4.jpeg" width="300" />
 </p><br>
 
+<h3>Imagem da Implementação</h3>
+<p align="center"><img src="../Imagens/foto2.png" align="center" width="900"><br></p><br>
+
 ********************************************************
 <h2 align="center">O: Operação</h2>
 
@@ -485,7 +485,9 @@ Um problema que infelizmente acompanhou o projeto foi que conforme vamos adicion
 ********************************************************
 <h2 align="center">Melhorias</h2>
 
-No primeiro momento existem várias melhorias que poderiam ser implementadas, luzes, sensores e/ou equipamentos que poderiam ser ligados diretamente no relê, e outros sensores diretamente na protoboard. Mas não para por aí, podemos até mesmo criar alertas, como por exemplo, quando detectar algo na nossa casa, podemos receber diretamente no chat o que está ocorrendo, isso de qualquer lugar do mundo. E a longo prazo poderíamos pensar grande, com tempo e conhecimento adequados, podemos explorar por exemplo a instalação de um sistema parecido para automatizar todos os setores de uma residência, portão, verificação de entrada, câmeras, sensores diversos, luzes, automatização de cômodos, entre outras funções.<br><br>
+Em buscas pela internet pode-se ver que existe módulos que já integram vários sensores de uma só vez, como o **1Sheeld**, basicamente esse shield compativel com Arduino consiste em duas partes, a primeira é a parte conectada à sua placa Arduino e atua como um intermediário sem fio, canalizando dados entre o Arduino e qualquer smartphone Android via Bluetooth e/ou Internet e a segunda parte é uma plataforma de software e aplicativo em smartphones que gerencia a comunicação entre o shield e o smartphone, assim em um sistema complexo de acesso a informações diversas pela internet de forma instantânea, o tempo de resposta é reduzido consideravelmente, pelo fato do sistema ser composto por algumas limitações físicas e processoais esses sistemas integrados fazem o intercâmbio de informações de forma natural e nativa pelo sistema. Em certo sentido, o 1Sheeld permite que possamos ter uma excelente experiência com idéias e variações, o que aumenta a velocidade de iteração e reduz os custos, além de ajudar a aumentar o potencial de inovação do Arduino.<br><br>
+
+E em um momento furuto existem várias melhorias que poderiam ser implementadas, luzes, sensores e/ou equipamentos que poderiam ser ligados diretamente no relê, e outros sensores diretamente na protoboard. Mas não para por aí, podemos até mesmo criar alertas, como por exemplo, quando detectar algo na nossa casa, podemos receber diretamente no chat o que está ocorrendo, isso de qualquer lugar do mundo. E a longo prazo poderíamos pensar grande, com tempo e conhecimento adequados, podemos explorar por exemplo a instalação de um sistema parecido para automatizar todos os setores de uma residência, portão, verificação de entrada, câmeras, sensores diversos, luzes, automatização de cômodos, entre outras funções.<br>
 
 <p align="center"><img src="../Imagens/melhorias_iot.png" align="center" width="900"><br></p><br>
 
