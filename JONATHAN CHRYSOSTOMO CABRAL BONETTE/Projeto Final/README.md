@@ -467,6 +467,10 @@ Podemos colocar o tratamento para cada comando que desejarmos, inclusive o Teleg
 
 <p align="center"><img src="../Imagens/bot_opcoes.jpeg" align="center" width="300"><br></p>
 
+<h3>Vídeo da Operação</h3>
+
+[![Vídeo da Operação](https://img.youtube.com/vi/ZuidLUeXmVE/maxresdefault.jpg)](https://youtu.be/ZuidLUeXmVE)
+
 ********************************************************
 <h2 align="center">Resultados, Percepções Pessoais e Considerações Finais</h2>
 
