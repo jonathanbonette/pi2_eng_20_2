@@ -45,13 +45,16 @@ As formas de onda dos sons são enviadas diretamente para o pino de I/O, resulta
 Utilizado para detectar o nível ou profundidade de um recipiente com água. Caso não seja detectado água na superfície da placa, a saída analógica do sensor se mantém zerada e quando o sensor detectar a presença de água sobre a superfície, a saída analógica irá variar sua leitura sempre acima de zero.
 <p align="center"><img src= "sensor_agua.png" align="center" width="200"><br></p>
 
-<h4>Módulo Bluetooth HC-05 / HC-06</h4>
-Possibilita transmitir e receber dados através de comunicação sem fio. Este módulo pode ser utilizado para criação de comunicação wireless para troca de informações entre dispositivos.
+<h4>Display LCD 16x2</h4>
+É um display que possui 16 colunas e 2 linhas para escrita, e este modelo tem como principal característica seu fundo azul e sua escrita branca. O Display LCD 16x2 é um modelo de display vastamente utilizado em projetos onde se necessita uma interface homem-máquina.
 
-<p align="center"><img src= "modulo_bluetooth.png" align="center" width="200"><br></p>
+<p align="center"><img src= "lcd.jpg" align="center" width="200"><br></p>
 
 <h3>Design</h3>
 
+<p align="center"><img src= "design.jpg" align="center" width="500"><br></p>
+
+<align="center">Design feito com o Fritzing para mostrar a protoboard com as suas devidas ligações<align="center">
 
 
 
