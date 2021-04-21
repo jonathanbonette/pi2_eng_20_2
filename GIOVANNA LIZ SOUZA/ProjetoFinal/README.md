@@ -54,7 +54,145 @@ Utilizado para detectar o nível ou profundidade de um recipiente com água. Cas
 
 <p align="center"><img src= "design.jpg" align="center" width="500"><br></p>
 
-<align="center">Design feito com o Fritzing para mostrar a protoboard com as suas devidas ligações<align="center">
+<p align="center">Design feito com o Fritzing para mostrar a protoboard com as suas devidas ligações</ p>
+
+<h3>Programação - Código</h3>
+
+#include <LiquidCrystal.h>
+#include <dht.h>
+#include "dht.h" //INCLUSÃO DE BIBLIOTECA
+
+//SENSOR GÁS
+int Pinbuzzer = 13; //PINO UTILIZADO PELO BUZZER
+int PinA0 = A0;//PINO UTILIZADO PELO SENSOR DE GÁS 
+int leitura_sensor = 300;//DEFININDO UM VALOR LIMITE 
+
+//SENSOR PIR
+const int pinoPIR = 2; //PINO DIGITAL UTILIZADO PELO SENSOR DE PRESENÇA
+const int pinoLED = 7; //PINO DIGITAL UTILIZADO PELO LED
+
+//SENSOR AGUA
+const int pinoSensor = A1; //PINO ANALÓGICO UTILIZADO PELO SENSOR
+const int pinoLEDD = 12; //PINO DIGITAL UTILIZADO PELO LED
+
+//SENSOR DHT11
+dht DHT; //VARIÁVEL DO TIPO DHT
+const int pinoDHT11 = A2; //PINO ANALÓGICO UTILIZADO PELO DHT11
+const int rs = 11, rw = 0 , e = 10, d4 = 5, d5 = 4, d6 = 3, d7 = 8; // PINOS UTILIZADOS PELO LCD
+LiquidCrystal lcd(rs, rw, e, d4, d5, d6, d7);
+
+//SIMBOLO DE GRAU
+byte grau[8] ={ B00001100,
+                B00010010,
+                B00010010,
+                B00001100,
+                B00000000,
+                B00000000,
+                B00000000,
+                B00000000,};
+
+void setup(){
+
+//SENSOR GAS
+pinMode(PinA0, INPUT); //DEFINE O PINO COMO ENTRADA
+pinMode(Pinbuzzer, OUTPUT); //DEFINE O PINO COMO SAÍDA
+Serial.begin(9600);//INICIALIZA A SERIAL
+
+//SENSOR PIR
+pinMode(pinoLED, OUTPUT); //DEFINE O PINO COMO SAÍDA
+pinMode(pinoPIR, INPUT); //DEFINE O PINO COMO ENTRADA
+
+//SENSOR AGUA
+pinMode(pinoSensor, INPUT); //DEFINE O PINO COMO ENTRADA
+pinMode(pinoLEDD, OUTPUT); //DEFINE O PINO COMO SAÍDA
+
+//SENSOR DHT11
+Serial.begin(9600); //Inicializa a serial
+lcd.begin(16,2); //Inicializa LCD
+//CRIA O CARACTERE PARA O SIMBOLO DO GRAU
+lcd.createChar(0, grau);
+  
+}
+void loop(){
+
+//SENSOR GAS
+int valor_analogico = analogRead(PinA0); //VARIÁVEL RECEBE O VALOR LIDO NO PINO ANALÓGICO
+Serial.print("Leitura: "); //EXIBE O TEXTO NO MONITOR SERIAL
+Serial.println(valor_analogico);// MOSTRA NO MONITOR SERIAL O VALOR LIDO DO PINO ANALÓGICO
+ if (valor_analogico > leitura_sensor){//SE VALOR LIDO NO PINO ANALÓGICO FOR MAIOR QUE O VALOR LIMITE, FAZ 
+ digitalWrite(Pinbuzzer, HIGH); //ATIVA O BUZZER E O MESMO EMITE O SINAL SONORO
+ }else{ //SENÃO, FAZ
+ digitalWrite(Pinbuzzer, LOW);//BUZZER DESLIGADO
+ }
+ delay(100); //INTERVALO DE 100 MILISSEGUNDOS
+
+//SENSOR PIR
+ if(digitalRead(pinoPIR) == HIGH){ //SE A LEITURA DO PINO FOR IGUAL A HIGH, FAZ
+    digitalWrite(pinoLED, HIGH); //ACENDE O LED
+ }else{ //SENÃO, FAZ
+  digitalWrite(pinoLED, LOW); //APAGA O LED
+ }
+
+//SENSOR AGUA
+if(analogRead(pinoSensor) > 690){ //SE A LEITURA DO PINO FOR MAIOR QUE 690 BITS, FAZ
+      digitalWrite(pinoLEDD, HIGH); //ACENDE O LED
+  }else{ //SENÃO, FAZ
+    digitalWrite(pinoLEDD, LOW); //APAGA O LED
+  }
+
+//SENSOR DHT11   
+DHT.read11(pinoDHT11); //LÊ AS INFORMAÇÕES DO SENSOR
+  Serial.print("Umidade: "); //IMPRIME O TEXTO NA SERIAL
+  Serial.print(DHT.humidity); //IMPRIME NA SERIAL O VALOR DE UMIDADE MEDIDO
+  Serial.print("%"); //ESCREVE O TEXTO EM SEGUIDA
+  Serial.print(" / Temperatura: "); //IMPRIME O TEXTO NA SERIAL
+  Serial.print(DHT.temperature, 0); //IMPRIME NA SERIAL O VALOR DE UMIDADE MEDIDO E REMOVE A PARTE DECIMAL
+  Serial.println("*C"); //IMPRIME O TEXTO NA SERIAL
+  delay(2000); //INTERVALO DE 2 SEGUNDOS
+
+ //LCD
+float h = DHT.humidity;     //Le o valor da umidade
+float t = DHT.temperature;  //Le o valor da temperatura
+
+  //FUNÇAO TEMPERATURA NO LCD
+  lcd.setCursor(0,0);
+  lcd.print("Temp: ");
+  lcd.setCursor(5,0);
+  lcd.print(t,1);
+  lcd.setCursor(9,0);
+  lcd.write((byte)0); //Mostra o simbolo do grau formado pelo array
+  
+  //FUNÇAO UMIDADE NO LCD
+  lcd.setCursor(0,1);
+  lcd.print("Umid: ");
+  lcd.setCursor(5,1);
+  lcd.print(h,1);
+  lcd.setCursor(9,1);
+  lcd.print("%");
+ delay(2000);
+}
+
+<h3>Operação</h3>
+Na primeira imagem é o projeto em andamento e na segunda é o projeto finalizado.
+
+<p align="center"><img src= "andamento.jpeg" align="center" width="250"><br></p>
+
+<p align="center"><img src= "final.jpeg" align="center" width="250"><br></p>
+
+Link do vídeo: https://1drv.ms/v/s!Anyw5wPwOlPSrVE3sANCs8WmEyId
+
+<h3>Considerações Finais</h3>
+Com o projeto finalizado pode-se notar que a ideia inicial do projeto era em alguns pontos bem diferente do que foi apresentado no final. Inicialmente foi planejado usar o módulo bluetooth junto com o arduino e o aplicativo BLYNK para fazer a comunicação externa, porém o hc-05 está limitado apenas para android, o que impossibilitou a continuidade do que havia sido planejado. Com isso, usei como alternativa o Display LCD, que me daria uma comunicação externa melhor. Outra alternativa seria um módulo WI-FI, porém como estamos em tempos difíceis, de quarentena e EaD, não consegui adquirir o mesmo. 
+Para melhorias futuras, teria em vista a troca do Display por um módulo wifi, usando tecnologias mais avançadas para que possa abranger não apenas Android mas também IOS. E para finalizar, um design de produto mais otimizado. 
+
+<h3>Referências</h3>
+<https://www.infoescola.com/tecnologia/domotica/> Acesso em: 12 de novembro 2020
+<https://www.mundodaeletrica.com.br/domotica-o-que-e-quais-as-vantagens/> Acesso em: 12 de novembro 2020
+<https://mundoeducacao.uol.com.br/informatica/domotica.htm> Acesso em: 12 de novembro 2020
+<https://blog.getninjas.com.br/o-que-e-domotica/> Acesso em: 12 de novembro 2020
+<http://www.sislite.pt/domus.htm#:~:text=Dom%C3%B3tica%20%C3%A9%20uma%20tecnologia%20recente,realizar%20a%C3%A7%C3%B5es%20de%20forma%20autom%C3%A1tica.> Acesso em: 12 de novembro 2020
+
+
 
 
 
