@@ -187,9 +187,13 @@ Para melhorias futuras, teria em vista a troca do Display por um módulo wifi, u
 
 <h3>Referências</h3>
 https://www.infoescola.com/tecnologia/domotica/ Acesso em: 12 de novembro 2020
+
 https://www.mundodaeletrica.com.br/domotica-o-que-e-quais-as-vantagens/ Acesso em: 12 de novembro 2020
+
 https://mundoeducacao.uol.com.br/informatica/domotica.htm Acesso em: 12 de novembro 2020
+
 https://blog.getninjas.com.br/o-que-e-domotica/ Acesso em: 12 de novembro 2020
+
 http://www.sislite.pt/domus.htm#:~:text=Dom%C3%B3tica%20%C3%A9%20uma%20tecnologia%20recente,realizar%20a%C3%A7%C3%B5es%20de%20forma%20autom%C3%A1tica. Acesso em: 12 de novembro 2020
 
 
