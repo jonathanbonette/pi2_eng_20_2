@@ -175,9 +175,9 @@ float t = DHT.temperature;  //Le o valor da temperatura
 <h3>Operação</h3>
 Na primeira imagem é o projeto em andamento e na segunda é o projeto finalizado.
 
-<p align="center"><img src= "andamento.jpeg" align="center" width="250"><br></p>
+<p align="center"><img src= "andamento.jpeg" align="center" width="380"><br></p>
 
-<p align="center"><img src= "final.jpeg" align="center" width="250"><br></p>
+<p align="center"><img src= "final.jpeg" align="center" width="360"><br></p>
 
 Link do vídeo: https://1drv.ms/v/s!Anyw5wPwOlPSrVE3sANCs8WmEyId
 
@@ -186,11 +186,11 @@ Com o projeto finalizado pode-se notar que a ideia inicial do projeto era em alg
 Para melhorias futuras, teria em vista a troca do Display por um módulo wifi, usando tecnologias mais avançadas para que possa abranger não apenas Android mas também IOS. E para finalizar, um design de produto mais otimizado. 
 
 <h3>Referências</h3>
-<https://www.infoescola.com/tecnologia/domotica/> Acesso em: 12 de novembro 2020
-<https://www.mundodaeletrica.com.br/domotica-o-que-e-quais-as-vantagens/> Acesso em: 12 de novembro 2020
-<https://mundoeducacao.uol.com.br/informatica/domotica.htm> Acesso em: 12 de novembro 2020
-<https://blog.getninjas.com.br/o-que-e-domotica/> Acesso em: 12 de novembro 2020
-<http://www.sislite.pt/domus.htm#:~:text=Dom%C3%B3tica%20%C3%A9%20uma%20tecnologia%20recente,realizar%20a%C3%A7%C3%B5es%20de%20forma%20autom%C3%A1tica.> Acesso em: 12 de novembro 2020
+https://www.infoescola.com/tecnologia/domotica/ Acesso em: 12 de novembro 2020
+https://www.mundodaeletrica.com.br/domotica-o-que-e-quais-as-vantagens/ Acesso em: 12 de novembro 2020
+https://mundoeducacao.uol.com.br/informatica/domotica.htm Acesso em: 12 de novembro 2020
+https://blog.getninjas.com.br/o-que-e-domotica/ Acesso em: 12 de novembro 2020
+http://www.sislite.pt/domus.htm#:~:text=Dom%C3%B3tica%20%C3%A9%20uma%20tecnologia%20recente,realizar%20a%C3%A7%C3%B5es%20de%20forma%20autom%C3%A1tica. Acesso em: 12 de novembro 2020
 
 
 
